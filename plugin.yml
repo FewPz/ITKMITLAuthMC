@@ -1,0 +1,11 @@
+name: ITKMITLAuthMC
+main: com.peeranat.mc.ITAuthMain
+version: 0.1
+api-version: 1.21
+author: [FewPz]
+description: This Is Authencation System For ITKMITL
+website: http://fewpz.xyz
+softdepend: []
+commands:
+  login:
+      alias: [l, auth]
