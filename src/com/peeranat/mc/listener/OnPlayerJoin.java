@@ -31,8 +31,10 @@ public class OnPlayerJoin implements Listener {
 //		player.sendTitle(Title.title(Component.text("Welcome Back").color(NamedTextColor.GOLD), Component.text("")));
 		player.sendMessage(ChatColor.YELLOW + "" + ChatColor.BOLD + "=== [ IT Authencation ] ===");
 		player.sendMessage("");
-		player.sendMessage(ChatColor.AQUA + "* " + ChatColor.WHITE + "Please login using "+ ChatColor.YELLOW +"/login <itkmitl-account> <password>");
-		player.sendMessage(ChatColor.GRAY + "" + ChatColor.ITALIC + "If you passed PSCP ratatype, you can pass this too XD");
+		player.sendMessage("You have 60 seconds to login. Otherwise, you will be kicked !");
+		player.sendMessage(ChatColor.AQUA + "* " + ChatColor.WHITE + "Please login using "+ ChatColor.YELLOW +"/login <itkmitl-account> <password> " + ChatColor.GREEN + "(On-learn Account)");
+		player.sendMessage("");
+		player.sendMessage(ChatColor.GRAY + "" + ChatColor.ITALIC + "Note: If you passed PSCP ratatype, you can pass this too XD");
 		
 		new BukkitRunnable() {
 			
