@@ -9,7 +9,7 @@ import com.peeranat.mc.ITAuthMain;
 import com.peeranat.mc.player.ITPlayer;
 
 import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.format.NamedTextColor;
+import net.md_5.bungee.api.ChatColor;
 
 public class PlayerTimeoutWorker implements Runnable {
 	
@@ -30,7 +30,7 @@ public class PlayerTimeoutWorker implements Runnable {
 				continue;
 			}
 			if (itplayer.getTimeout() % 10 == 0) {
-				player.sendMessage(Component.text("You have " + itplayer.getTimeout() + " seconds to login!").color(NamedTextColor.RED));
+				player.sendMessage(ChatColor.RED + "You have " + ChatColor.BOLD + itplayer.getTimeout() + ChatColor.RESET + ChatColor.RED + " seconds to log in");
 				player.playSound(player.getLocation(), Sound.ENTITY_CAT_AMBIENT, 1, itplayer.getTimeout() / 60.0f);
 			}
 			itplayer.decrementTimeout();

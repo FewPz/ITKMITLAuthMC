@@ -1,5 +1,6 @@
 package com.peeranat.mc.cmd;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -8,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffectType;
 
 import com.peeranat.mc.ITAuthMain;
+import com.peeranat.mc.events.PlayerAuthencationEvent;
 import com.peeranat.mc.lib.AuthLib;
 import com.peeranat.mc.lib.AuthResponse;
 import com.peeranat.mc.player.ITPlayer;
@@ -48,6 +50,9 @@ public class LoginCmd implements CommandExecutor {
 			
 			player.playSound(player.getLocation(), Sound.ENTITY_CAT_AMBIENT, 1, 1);
 			player.removePotionEffect(PotionEffectType.BLINDNESS);
+			
+			// Call the PlayerAuthencationEvent
+			Bukkit.getPluginManager().callEvent(new PlayerAuthencationEvent(player, itplayer));
 		} else {
 			player.sendMessage(ChatColor.RED + "Usage: /login <itkmitl-account> <password>");	
 			player.playSound(player.getLocation(), Sound.ENTITY_CAT_AMBIENT, 1, 0);
