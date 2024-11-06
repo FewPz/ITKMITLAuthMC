@@ -36,7 +36,7 @@ public class PlayerTimeoutWorker implements Runnable {
 			itplayer.decrementTimeout();
 			if (itplayer.getTimeout() < 0) {
 				player.removePotionEffect(PotionEffectType.BLINDNESS);
-				player.kick(Component.text("It's been 30 seconds and you haven't logged in yet. Good bye!"));
+				player.kick(Component.text("It's been 60 seconds and you haven't logged in yet. Good bye!"));
 			}
 		}
 	}

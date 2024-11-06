@@ -28,7 +28,6 @@ public class OnPlayerJoin implements Listener {
 	public void OnPlayerJoinEvent(PlayerJoinEvent e) {
 		Player player = e.getPlayer();
 		
-//		player.sendTitle(Title.title(Component.text("Welcome Back").color(NamedTextColor.GOLD), Component.text("")));
 		player.sendMessage(ChatColor.YELLOW + "" + ChatColor.BOLD + "=== [ IT Authencation ] ===");
 		player.sendMessage("");
 		player.sendMessage("You have 60 seconds to login. Otherwise, you will be kicked !");
